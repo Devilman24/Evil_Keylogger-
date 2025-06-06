@@ -1,3 +1,4 @@
+
 # 🎭 Evil_Keylogger 🎭
 
 **epykey.py** is a Python script designed to capture keystrokes and send them to a remote server or save them locally in case of connection issues.
@@ -20,55 +21,86 @@
 - **Python 3.7+**  
 - The following Python libraries:  
 
-  ```bash
-  pip install pynput requests
-  ```
-    pynput: to capture keyboard events.
-
-    requests: to send HTTP requests.
-
-    threading: to manage periodic tasks.
-
-    json: to format data into JSON.
-
-⚙️ Configuration
-
-    Open the file epykey.py.
-
-    Modify the following values:
-    ```python
-      ip_address = "IP"  # Replace with your server's IP address.
-      port_number = "Port"  # Replace with your server's port.
-      time_interval = 10  # Set the interval for sending data (in seconds).
     ```
-If no server is configured, the keystrokes will be saved locally in a file named keystrokes_backup.txt.
+    pip install pynput requests
+  ````
 
+* `pynput`: to capture keyboard events.
+* `requests`: to send HTTP requests.
+* `threading`: to manage periodic tasks.
+* `json`: to format data into JSON.
 
-🚀 Usage
+---
 
-    Run the script in a terminal:
-    ```bash
-    python3 epykey.py
-    ```
-    The keylogger will start capturing keystrokes.
-    Press ESC to stop.
+## ⚙️ Configuration
 
-    Data will be sent to the configured server or saved locally.
+1. Open the file `epykey.py`.
 
-⚠️ Warnings
+2. Modify the following values:
 
-    This script is intended for responsible and legal use only.
+   ```python
+   ip_address = "IP"  # Replace with your server's IP address.
+   port_number = "Port"  # Replace with your server's port.
+   time_interval = 10  # Set the interval for sending data (in seconds).
+   ```
 
-    Any unauthorized or malicious use is strictly prohibited.
+3. If no server is configured, the keystrokes will be saved locally in a file named `keystrokes_backup.txt`.
 
-🤝 Contributions
+---
+
+## 🚀 Usage
+
+1. Run the script in a terminal:
+
+   ```bash
+   python3 epykey.py
+   ```
+
+2. The keylogger will start capturing keystrokes.
+   Press **ESC** to stop.
+
+3. Data will be sent to the configured server or saved locally.
+
+---
+
+## ⚠️ Warnings
+
+* This script is intended for **responsible and legal use only**.
+* Any unauthorized or malicious use is strictly prohibited.
+
+---
+
+## 🤝 Contributions
 
 Contributions to enhance this project are welcome! 🎉
 
-    Submit a pull request.
+* Submit a **pull request**.
+* Open an **issue** on this GitHub repository.
 
-    Open an issue on this GitHub repository.
+---
 
+## 📜 License
 
+**Important**: Use this tool only in controlled environments or with explicit permission from the intended users.
 
+[MIT License](LICENSE)
+
+  ---
   
+  💻 *Happy Coding!* 🚀
+  
+  
+
+### How to add this README to your GitHub repository:  
+
+1. Create a file named `README.md` in your project folder.  
+2. Paste the content above into the file.  
+3. Add it to your Git repository and push it to GitHub:  
+
+```bash
+git add README.md
+git commit -m "Add a polished README for Evil_Keylogger"
+git push
+````
+
+
