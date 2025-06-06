@@ -21,4 +21,54 @@
 - The following Python libraries:  
 
   ```bash
-  pip install pynput requests 
+  pip install pynput requests
+  ```
+    pynput: to capture keyboard events.
+
+    requests: to send HTTP requests.
+
+    threading: to manage periodic tasks.
+
+    json: to format data into JSON.
+
+⚙️ Configuration
+
+    Open the file epykey.py.
+
+    Modify the following values:
+    ```python
+      ip_address = "IP"  # Replace with your server's IP address.
+      port_number = "Port"  # Replace with your server's port.
+      time_interval = 10  # Set the interval for sending data (in seconds).
+    ```
+If no server is configured, the keystrokes will be saved locally in a file named keystrokes_backup.txt.
+
+
+🚀 Usage
+
+    Run the script in a terminal:
+    ```bash
+    python3 epykey.py
+    ```
+    The keylogger will start capturing keystrokes.
+    Press ESC to stop.
+
+    Data will be sent to the configured server or saved locally.
+
+⚠️ Warnings
+
+    This script is intended for responsible and legal use only.
+
+    Any unauthorized or malicious use is strictly prohibited.
+
+🤝 Contributions
+
+Contributions to enhance this project are welcome! 🎉
+
+    Submit a pull request.
+
+    Open an issue on this GitHub repository.
+
+
+
+  
