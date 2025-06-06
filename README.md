@@ -44,7 +44,7 @@
    time_interval = 10  # Set the interval for sending data (in seconds).
    ```
 
-3. If no server is configured, the keystrokes will be saved locally in a file named `keystrokes_backup.txt`.
+3. If no server is configured, the keystrokes will be saved locally in a file named `epykey_backup.txt`.
 
 ---
 
@@ -56,7 +56,7 @@
    python3 epykey.py
    ```
 
-2. The keylogger will start capturing keystrokes.
+2. The keylogger will start capturing epykey.
    Press **ESC** to stop.
 
 3. Data will be sent to the configured server or saved locally.
@@ -83,7 +83,7 @@ Contributions to enhance this project are welcome! 🎉
 
 **Important**: Use this tool only in controlled environments or with explicit permission from the intended users.
 
-[MIT License](LICENSE)
+[DEVILMAN](LICENSE)
 
   ---
   
